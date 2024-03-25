@@ -1,4 +1,4 @@
-export interface Alumnos {
+export interface Alumno {
     matricula: string;
     nombre: string;
     id?: number;

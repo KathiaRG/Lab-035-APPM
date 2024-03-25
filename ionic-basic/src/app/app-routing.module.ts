@@ -16,10 +16,6 @@ const routes: Routes = [
     loadChildren: () => import('./presupuesto/presupuesto.module').then( m => m.PRESUPUESTOPageModule)
   },
   {
-    path: 'alumnos',
-    loadChildren: () => import('./alumnos/alumnos.module').then( m => m.AlumnosPageModule)
-  },
-  {
     path: 'inicio',
     loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
   },
@@ -34,6 +30,22 @@ const routes: Routes = [
   {
     path: 'detalle-receta',
     loadChildren: () => import('./detalle-receta/detalle-receta.module').then( m => m.DetalleRecetaPageModule)
+  },
+  {
+    path: 'alumnos',
+    loadChildren: () => import('./alumnos/alumnos.module').then( m => m.AlumnosPageModule)
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'logout',
+    loadChildren: () => import('./logout/logout.module').then( m => m.LogoutPageModule)
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
   },
 ];
 

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "lab-032-5c834": {
+      "hosting": {
+        "app": [
+          "lab-032-5c834"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "lab-032-5c834"
+  }
+}

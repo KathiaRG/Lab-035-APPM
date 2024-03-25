@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Alumnos } from '../alumnos'
-import { AlumnoService } from '../alumnos.service';
+import { Alumno } from '../alumno';
+import { AlumnoService } from '../alumno.service';
 
 
 @Component({
@@ -8,9 +8,9 @@ import { AlumnoService } from '../alumnos.service';
   templateUrl: './alumnos.page.html'
 })
 
-export class AlumnoPage implements OnInit {
+export class AlumnosPage implements OnInit {
 
-  alumnos:Alumnos[]= [];
+  alumnos:Alumno[]= [];
   nombre: string = '';
   matricula: string ='';
   estado: string = '';
@@ -40,7 +40,7 @@ export class AlumnoPage implements OnInit {
       this.error = true;
       return;
     }  
-    let alumno: Alumnos={
+    let alumno: Alumno={
       nombre: this.nombre,
       matricula: this.matricula
     };
@@ -68,7 +68,7 @@ export class AlumnoPage implements OnInit {
     this.alumnos = this.alumnoService.getAlumos();
   }
 
-  public editar(alumno:Alumnos){
+  public editar(alumno:Alumno){
     this.estado = 'actualizar';
     this.matricula = alumno.matricula;
     this.nombre = alumno.nombre;
@@ -76,4 +76,3 @@ export class AlumnoPage implements OnInit {
   }
 
 }
-

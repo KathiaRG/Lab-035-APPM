@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
-import { Alumnos } from './alumnos';
+import { Alumno } from './alumno';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AlumnoService {
 
-  private alumnos: Alumnos[]= [];
+  private alumnos: Alumno[]= [];
 
 
   constructor() { }
 
-  public agregarAlumno(alumno: Alumnos){
+  public agregarAlumno(alumno: Alumno){
     if(this.alumnos.length>0){
       alumno.id = this.alumnos.length + 1 ;
     } else {
@@ -25,15 +25,15 @@ export class AlumnoService {
     this.alumnos.filter(( al => al.id!=id ));
   }
 
-  public getAlumos(): Alumnos[]{
+  public getAlumos(): Alumno[]{
     return this.alumnos;
   }
 
-  public setAlumnos(alumnos: Alumnos[]){
+  public setAlumnos(alumnos: Alumno[]){
     this.alumnos = alumnos;
   }
 
-  public actualiza(alumno: Alumnos): Alumnos[]{
+  public actualiza(alumno: Alumno): Alumno[]{
     this.alumnos.filter(
       (al)=>al.id==alumno.id
     ).map(al=>{
